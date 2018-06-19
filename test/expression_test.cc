@@ -26,7 +26,7 @@ namespace {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, CompiledIntegerConstant) {
     llvm::LLVMContext context;
-    Constant constant(42l);
+    Constant constant(42ll);
     ExpressionCompiler compiler(context);
     compiler.compile(constant);
     auto result = compiler.run(nullptr);
@@ -47,8 +47,8 @@ TEST(ExpressionTest, CompiledIntegerArgument) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, CompiledIntegerAddition) {
     llvm::LLVMContext context;
-    Constant l(42l);
-    Constant r(21l);
+    Constant l(42ll);
+    Constant r(21ll);
     AddExpression add(l, r);
     ExpressionCompiler compiler(context);
     compiler.compile(add);
@@ -59,8 +59,8 @@ TEST(ExpressionTest, CompiledIntegerAddition) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, CompiledIntegerSubtraction) {
     llvm::LLVMContext context;
-    Constant l(21l);
-    Constant r(42l);
+    Constant l(21ll);
+    Constant r(42ll);
     SubExpression sub(l, r);
     ExpressionCompiler compiler(context);
     compiler.compile(sub);
@@ -71,8 +71,8 @@ TEST(ExpressionTest, CompiledIntegerSubtraction) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, CompiledIntegerMultiplication) {
     llvm::LLVMContext context;
-    Constant l(42l);
-    Constant r(21l);
+    Constant l(42ll);
+    Constant r(21ll);
     MulExpression mul(l, r);
     ExpressionCompiler compiler(context);
     compiler.compile(mul);
@@ -83,8 +83,8 @@ TEST(ExpressionTest, CompiledIntegerMultiplication) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, CompiledIntegerDivision) {
     llvm::LLVMContext context;
-    Constant l(42l);
-    Constant r(21l);
+    Constant l(42ll);
+    Constant r(21ll);
     DivExpression div(l, r);
     ExpressionCompiler compiler(context);
     compiler.compile(div);
@@ -95,9 +95,9 @@ TEST(ExpressionTest, CompiledIntegerDivision) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, InterpretedIntegerConstant) {
     llvm::LLVMContext context;
-    Constant constant(42l);
+    Constant constant(42ll);
     auto result = constant.evaluate(nullptr);
-    EXPECT_EQ(result, result);
+    EXPECT_EQ(result, 42);
 }
 
 // NOLINTNEXTLINE
@@ -112,8 +112,8 @@ TEST(ExpressionTest, InterpretedIntegerArgument) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, InterpretedIntegerAddition) {
     llvm::LLVMContext context;
-    Constant l(42l);
-    Constant r(21l);
+    Constant l(42ll);
+    Constant r(21ll);
     AddExpression add(l, r);
     auto result = add.evaluate(nullptr);
     EXPECT_EQ(result, 63);
@@ -122,8 +122,8 @@ TEST(ExpressionTest, InterpretedIntegerAddition) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, InterpretedIntegerSubtraction) {
     llvm::LLVMContext context;
-    Constant l(21l);
-    Constant r(42l);
+    Constant l(21ll);
+    Constant r(42ll);
     SubExpression sub(l, r);
     auto result = sub.evaluate(nullptr);
     EXPECT_EQ(result, -21);
@@ -132,8 +132,8 @@ TEST(ExpressionTest, InterpretedIntegerSubtraction) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, InterpretedIntegerMultiplication) {
     llvm::LLVMContext context;
-    Constant l(42l);
-    Constant r(21l);
+    Constant l(42ll);
+    Constant r(21ll);
     MulExpression mul(l, r);
     auto result = mul.evaluate(nullptr);
     EXPECT_EQ(result, 882);
@@ -142,8 +142,8 @@ TEST(ExpressionTest, InterpretedIntegerMultiplication) {
 // NOLINTNEXTLINE
 TEST(ExpressionTest, InterpretedIntegerDivision) {
     llvm::LLVMContext context;
-    Constant l(42l);
-    Constant r(21l);
+    Constant l(42ll);
+    Constant r(21ll);
     DivExpression div(l, r);
     auto result = div.evaluate(nullptr);
     EXPECT_EQ(result, 2);
@@ -155,9 +155,9 @@ TEST(ExpressionTest, CompiledComplexIntegerExpression) {
 
     // (((42 + a1) * (21 - a0) * a2) + 100) / a3
 
-    Constant c1(42l);
-    Constant c2(21l);
-    Constant c3(100l);
+    Constant c1(42ll);
+    Constant c2(21ll);
+    Constant c3(100ll);
 
     Argument a0(0, Expression::ValueType::INT64);
     Argument a1(1, Expression::ValueType::INT64);
@@ -201,9 +201,9 @@ TEST(ExpressionTest, InterpretedComplexIntegerExpression) {
 
     // (((42 + a1) * (21 - a0) * a2) + 100) / a3
 
-    Constant c1(42l);
-    Constant c2(21l);
-    Constant c3(100l);
+    Constant c1(42ll);
+    Constant c2(21ll);
+    Constant c3(100ll);
 
     Argument a0(0, Expression::ValueType::INT64);
     Argument a1(1, Expression::ValueType::INT64);
@@ -458,7 +458,7 @@ TEST(ExpressionTest, ComiledCastingExpression) {
 
     Constant c1(42.0);
     Constant c2(21.0);
-    Constant c3(100l);
+    Constant c3(100ll);
 
     Argument a0(0, Expression::ValueType::DOUBLE);
     Argument a1(1, Expression::ValueType::DOUBLE);
