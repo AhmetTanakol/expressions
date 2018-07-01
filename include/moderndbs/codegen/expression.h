@@ -7,6 +7,7 @@
 #include <llvm/IR/IRBuilder.h>
 #include <llvm/IR/LLVMContext.h>
 #include <llvm/IR/Module.h>
+#include <iostream>
 
 namespace moderndbs {
     /// A value (can either be a signed (!) 64 bit integer or a double).
@@ -45,7 +46,18 @@ namespace moderndbs {
         explicit Constant(double value)
             : Expression(ValueType::DOUBLE), value(*reinterpret_cast<data64_t*>(&value)) {}
 
-        /// TODO(students) implement evaluate and build
+
+        data64_t evaluate(const data64_t* args) {
+            return static_cast<int64_t>(this->value);
+        }
+
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+            if (this->getType() == ValueType::INT64) {
+                return llvm::ConstantInt::get(builder.getInt64Ty(), this->value);
+            } else {
+                return llvm::ConstantFP::get(builder.getDoubleTy(), this->value);
+            }
+        }
     };
 
     struct Argument: public Expression {
@@ -56,7 +68,15 @@ namespace moderndbs {
         Argument(uint64_t index, ValueType type)
             : Expression(type), index(index) {}
 
-        /// TODO(students) implement evaluate and build
+        data64_t evaluate(const data64_t* args) {
+            return *(args + this->index);
+        }
+
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+            llvm::Value *arg1_a = builder.CreateGEP(args, llvm::ConstantInt::get(builder.getInt64Ty(), this->index), "ptr");
+            llvm::Value *data = builder.CreateLoad(arg1_a, "a");
+            return builder.CreateZExt(data, builder.getInt64Ty(), "i");
+        }
     };
 
     struct Cast: public Expression {
@@ -93,7 +113,23 @@ namespace moderndbs {
         AddExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        /// TODO(students) implement evaluate and build
+        data64_t evaluate(const data64_t* args) {
+            return this->left.evaluate(args) + this->right.evaluate(args);
+        }
+
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+            if (this->getType() == ValueType::INT64) {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Add = builder.CreateAdd(val1, val2);
+                return Add;
+            } else {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Add = builder.CreateFAdd(val1, val2);
+                return Add;
+            }
+        }
     };
 
     struct SubExpression: public BinaryExpression {
@@ -101,7 +137,23 @@ namespace moderndbs {
         SubExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        /// TODO(students) implement evaluate and build
+        data64_t evaluate(const data64_t* args) {
+            return this->left.evaluate(args) - this->right.evaluate(args);
+        }
+
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+            if (this->getType() == ValueType::INT64) {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Sub = builder.CreateSub(val1, val2);
+                return Sub;
+            } else {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Sub = builder.CreateFSub(val1, val2);
+                return Sub;
+            }
+        }
     };
 
     struct MulExpression: public BinaryExpression {
@@ -109,7 +161,23 @@ namespace moderndbs {
         MulExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        /// TODO(students) implement evaluate and build
+        data64_t evaluate(const data64_t* args) {
+            return this->left.evaluate(args) * this->right.evaluate(args);
+        }
+
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+            if (this->getType() == ValueType::INT64) {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Mul = builder.CreateMul(val1, val2);
+                return Mul;
+            } else {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Mul = builder.CreateFMul(val1, val2);
+                return Mul;
+            }
+        }
     };
 
     struct DivExpression: public BinaryExpression {
@@ -117,7 +185,23 @@ namespace moderndbs {
         DivExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        /// TODO(students) implement evaluate and build
+        data64_t evaluate(const data64_t* args) {
+            return this->left.evaluate(args) / this->right.evaluate(args);
+        }
+
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+            if (this->getType() == ValueType::INT64) {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Div = builder.CreateSDiv(val1, val2);
+                return Div;
+            } else {
+                llvm::Value* val1 = this->left.build(builder, args);
+                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value *Div = builder.CreateFDiv(val1, val2);
+                return Div;
+            }
+        }
     };
 
     struct ExpressionCompiler {
