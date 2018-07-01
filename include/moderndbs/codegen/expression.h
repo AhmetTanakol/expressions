@@ -47,15 +47,15 @@ namespace moderndbs {
             : Expression(ValueType::DOUBLE), value(*reinterpret_cast<data64_t*>(&value)) {}
 
 
-        data64_t evaluate(const data64_t* args) {
-            return static_cast<int64_t>(this->value);
+        data64_t evaluate(const data64_t* args) override {
+            return this->value;
         }
 
-        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
                 return llvm::ConstantInt::get(builder.getInt64Ty(), this->value);
             } else {
-                return llvm::ConstantFP::get(builder.getDoubleTy(), this->value);
+                return llvm::ConstantFP::get(builder.getDoubleTy(), *reinterpret_cast<double *>(&this->value));
             }
         }
     };
@@ -68,11 +68,11 @@ namespace moderndbs {
         Argument(uint64_t index, ValueType type)
             : Expression(type), index(index) {}
 
-        data64_t evaluate(const data64_t* args) {
+        data64_t evaluate(const data64_t* args) override {
             return *(args + this->index);
         }
 
-        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             llvm::Value *arg1_a = builder.CreateGEP(args, llvm::ConstantInt::get(builder.getInt64Ty(), this->index), "ptr");
             llvm::Value *data = builder.CreateLoad(arg1_a, "a");
             return builder.CreateZExt(data, builder.getInt64Ty(), "i");
@@ -113,11 +113,18 @@ namespace moderndbs {
         AddExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        data64_t evaluate(const data64_t* args) {
-            return this->left.evaluate(args) + this->right.evaluate(args);
+        data64_t evaluate(const data64_t* args) override {
+            if (this->getType() == ValueType::INT64) {
+                return this->left.evaluate(args) + this->right.evaluate(args);
+            } else {
+                auto l = this->left.evaluate(args);
+                auto r = this->right.evaluate(args);
+                double res = *reinterpret_cast<double*>(&l) + *reinterpret_cast<double*>(&r);
+                return *reinterpret_cast<data64_t*>(&res);
+            }
         }
 
-        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
                 llvm::Value* val1 = this->left.build(builder, args);
                 llvm::Value* val2 = this->right.build(builder, args);
@@ -137,11 +144,18 @@ namespace moderndbs {
         SubExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        data64_t evaluate(const data64_t* args) {
-            return this->left.evaluate(args) - this->right.evaluate(args);
+        data64_t evaluate(const data64_t* args) override {
+            if (this->getType() == ValueType::INT64) {
+                return this->left.evaluate(args) - this->right.evaluate(args);
+            } else {
+                auto l = this->left.evaluate(args);
+                auto r = this->right.evaluate(args);
+                double res = *reinterpret_cast<double*>(&l) - *reinterpret_cast<double*>(&r);
+                return *reinterpret_cast<data64_t*>(&res);
+            }
         }
 
-        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
                 llvm::Value* val1 = this->left.build(builder, args);
                 llvm::Value* val2 = this->right.build(builder, args);
@@ -161,11 +175,18 @@ namespace moderndbs {
         MulExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        data64_t evaluate(const data64_t* args) {
-            return this->left.evaluate(args) * this->right.evaluate(args);
+        data64_t evaluate(const data64_t* args) override {
+            if (this->getType() == ValueType::INT64) {
+                return this->left.evaluate(args) * this->right.evaluate(args);
+            } else {
+                auto l = this->left.evaluate(args);
+                auto r = this->right.evaluate(args);
+                double res = *reinterpret_cast<double*>(&l) * *reinterpret_cast<double*>(&r);
+                return *reinterpret_cast<data64_t*>(&res);
+            }
         }
 
-        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
                 llvm::Value* val1 = this->left.build(builder, args);
                 llvm::Value* val2 = this->right.build(builder, args);
@@ -185,11 +206,18 @@ namespace moderndbs {
         DivExpression(Expression& left, Expression& right)
             : BinaryExpression(left, right) {}
 
-        data64_t evaluate(const data64_t* args) {
-            return this->left.evaluate(args) / this->right.evaluate(args);
+        data64_t evaluate(const data64_t* args) override {
+            if (this->getType() == ValueType::INT64) {
+                return this->left.evaluate(args) / this->right.evaluate(args);
+            } else {
+                auto l = this->left.evaluate(args);
+                auto r = this->right.evaluate(args);
+                double res = *reinterpret_cast<double*>(&l) / *reinterpret_cast<double*>(&r);
+                return *reinterpret_cast<data64_t*>(&res);
+            }
         }
 
-        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) {
+        llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
                 llvm::Value* val1 = this->left.build(builder, args);
                 llvm::Value* val2 = this->right.build(builder, args);
