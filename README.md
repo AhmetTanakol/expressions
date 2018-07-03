@@ -1,3 +1,7 @@
+Name: Tanakol, Ahmet
+
+Matriculation number: 03691681
+
 # Expressions
 
 Implement an expression interpreter and an expression compiler for your database.
