@@ -249,7 +249,7 @@ namespace
 
             auto expected = (((42 + args[1]) * (21 - args[0]) * args[2]) + 100) / args[3];
             auto result = root.evaluate(reinterpret_cast<data64_t *>(args.data()));
-
+            std::cout << "expected: " << expected << " result: " << result << std::endl;
             ASSERT_EQ(result, expected);
         }
     }

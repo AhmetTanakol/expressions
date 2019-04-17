@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/ahmettanakol/projects/moderndb/task-6-expressions",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/include -I/usr/local/Cellar/llvm/6.0.0/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gmock/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++1z -o CMakeFiles/bm_expression.dir/bench/bm_expression.cc.o -c /Users/ahmettanakol/projects/moderndb/task-6-expressions/bench/bm_expression.cc",
+  "file": "/Users/ahmettanakol/projects/moderndb/task-6-expressions/bench/bm_expression.cc"
+},
+{
+  "directory": "/Users/ahmettanakol/projects/moderndb/task-6-expressions",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/include -I/usr/local/Cellar/llvm/6.0.0/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++1z -o CMakeFiles/moderndbs.dir/src/codegen/example/printf.cc.o -c /Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/example/printf.cc",
+  "file": "/Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/example/printf.cc"
+},
+{
+  "directory": "/Users/ahmettanakol/projects/moderndb/task-6-expressions",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/include -I/usr/local/Cellar/llvm/6.0.0/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++1z -o CMakeFiles/moderndbs.dir/src/codegen/expression.cc.o -c /Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/expression.cc",
+  "file": "/Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/expression.cc"
+},
+{
+  "directory": "/Users/ahmettanakol/projects/moderndb/task-6-expressions",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/include -I/usr/local/Cellar/llvm/6.0.0/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++1z -o CMakeFiles/moderndbs.dir/src/codegen/jit.cc.o -c /Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/jit.cc",
+  "file": "/Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/jit.cc"
+},
+{
+  "directory": "/Users/ahmettanakol/projects/moderndb/task-6-expressions",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/include -I/usr/local/Cellar/llvm/6.0.0/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gmock/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++1z -o CMakeFiles/tester.dir/test/tester.cc.o -c /Users/ahmettanakol/projects/moderndb/task-6-expressions/test/tester.cc",
+  "file": "/Users/ahmettanakol/projects/moderndb/task-6-expressions/test/tester.cc"
+},
+{
+  "directory": "/Users/ahmettanakol/projects/moderndb/task-6-expressions",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/include -I/usr/local/Cellar/llvm/6.0.0/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include -I/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include -isystem /Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gmock/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++1z -o CMakeFiles/tester.dir/test/expression_test.cc.o -c /Users/ahmettanakol/projects/moderndb/task-6-expressions/test/expression_test.cc",
+  "file": "/Users/ahmettanakol/projects/moderndb/task-6-expressions/test/expression_test.cc"
+}
+]

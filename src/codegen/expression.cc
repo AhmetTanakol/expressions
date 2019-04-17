@@ -40,14 +40,13 @@ void ExpressionCompiler::compile(Expression& expression) {
         llvm::Value* val = expression.build(builder, &*argiter);
         llvm::Value* res = builder.CreateBitCast(val, builder.getInt64Ty());
         builder.CreateRet(res);
-        this->dump();
+        auto moduleHandle = this->jit.addModule(std::move(this->module));
+        void* F = this->jit.getPointerToFunction("MyFunction");
+        this->fnPtr = reinterpret_cast<data64_t (*)(data64_t *)>(F);
 }
 
 /// Compile an expression.
 data64_t ExpressionCompiler::run(data64_t* args) {
-    auto moduleHandle = this->jit.addModule(std::move(this->module));
-    void* F = this->jit.getPointerToFunction("MyFunction");
-    this->fnPtr = reinterpret_cast<data64_t (*)(data64_t *)>(F);
     data64_t result = this->fnPtr(args);
     return result;
 }

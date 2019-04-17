@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libmoderndbs.a  CMakeFiles/moderndbs.dir/src/codegen/example/printf.cc.o CMakeFiles/moderndbs.dir/src/codegen/expression.cc.o CMakeFiles/moderndbs.dir/src/codegen/jit.cc.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libmoderndbs.a

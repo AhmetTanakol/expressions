@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\Cellar\;CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\;CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\;CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\;CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\cmake\llvm\;CMake Files\vendor\;CMake Files\vendor\benchmark\;CMake Files\vendor\benchmark\tmp\;CMake Files\vendor\gtm\;CMake Files\vendor\gtm\tmp\;CMake Files\vendor\gflags\;CMake Files\vendor\gflags\tmp\;CMake Files\vendor\rapidjson\;CMake Files\vendor\rapidjson\tmp\;CMake Files\cmake\;CMake Files\include\;CMake Files\src\;CMake Files\tools\;CMake Files\test\;CMake Files\bench\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bm_expression">
+				<Option output="/Users/ahmettanakol/projects/moderndb/task-6-expressions/bm_expression" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gmock/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 bm_expression"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bm_expression/fast">
+				<Option output="/Users/ahmettanakol/projects/moderndb/task-6-expressions/bm_expression" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gmock/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 bm_expression/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_test">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 lint_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="moderndbs">
+				<Option output="/Users/ahmettanakol/projects/moderndb/task-6-expressions/libmoderndbs.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 moderndbs"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="moderndbs/fast">
+				<Option output="/Users/ahmettanakol/projects/moderndb/task-6-expressions/libmoderndbs.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 moderndbs/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tester">
+				<Option output="/Users/ahmettanakol/projects/moderndb/task-6-expressions/tester" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gmock/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 tester"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tester/fast">
+				<Option output="/Users/ahmettanakol/projects/moderndb/task-6-expressions/tester" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/include"/>
+					<Add directory="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/gmock/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 tester/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="googletest">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 googletest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_src">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 gmock_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gflags_src">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 gflags_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="intrinsics_gen">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 intrinsics_gen"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rapidjson_src">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 rapidjson_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_src">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 gtest_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 lint"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_tools">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 lint_tools"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_src">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 lint_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="benchmark_src">
+				<Option working_dir="/Users/ahmettanakol/projects/moderndb/task-6-expressions"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 benchmark_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/ahmettanakol/projects/moderndb/task-6-expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/bench/bm_expression.cc">
+			<Option target="bm_expression"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include/moderndbs/codegen/examples.h">
+			<Option target="moderndbs"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include/moderndbs/codegen/expression.h">
+			<Option target="moderndbs"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include/moderndbs/codegen/jit.h">
+			<Option target="moderndbs"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include/moderndbs/error.h">
+			<Option target="moderndbs"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/example/printf.cc">
+			<Option target="moderndbs"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/expression.cc">
+			<Option target="moderndbs"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/src/codegen/jit.cc">
+			<Option target="moderndbs"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/test/expression_test.cc">
+			<Option target="tester"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/test/tester.cc">
+			<Option target="tester"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/../../../../../usr/local/Cellar/llvm/6.0.0/lib/cmake/llvm/LLVM-Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/../../../../../usr/local/Cellar/llvm/6.0.0/lib/cmake/llvm/LLVMConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/../../../../../usr/local/Cellar/llvm/6.0.0/lib/cmake/llvm/LLVMConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/../../../../../usr/local/Cellar/llvm/6.0.0/lib/cmake/llvm/LLVMExports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/../../../../../usr/local/Cellar/llvm/6.0.0/lib/cmake/llvm/LLVMExports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\Cellar\llvm\6.0.0\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark.cmake">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags.cmake">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/googletest.cmake">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/rapidjson.cmake">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/benchmark/tmp/benchmark_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\benchmark\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/tmp/gmock_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gtm\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/tmp/googletest-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gtm\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gtm/tmp/gtest_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gtm\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/gflags/tmp/gflags_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gflags\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/vendor/rapidjson/tmp/rapidjson_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\rapidjson\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/cmake/clang-tidy.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/include/local.cmake">
+			<Option virtualFolder="CMake Files\include\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/src/local.cmake">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/tools/local.cmake">
+			<Option virtualFolder="CMake Files\tools\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/test/local.cmake">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/Users/ahmettanakol/projects/moderndb/task-6-expressions/bench/local.cmake">
+			<Option virtualFolder="CMake Files\bench\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

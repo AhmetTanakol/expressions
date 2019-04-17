@@ -69,7 +69,7 @@ namespace moderndbs {
             : Expression(type), index(index) {}
 
         data64_t evaluate(const data64_t* args) override {
-            return *(args + this->index);
+            return args[this->index];
         }
 
         llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
@@ -126,13 +126,13 @@ namespace moderndbs {
 
         llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Add = builder.CreateAdd(val1, val2);
                 return Add;
             } else {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Add = builder.CreateFAdd(val1, val2);
                 return Add;
             }
@@ -157,13 +157,13 @@ namespace moderndbs {
 
         llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Sub = builder.CreateSub(val1, val2);
                 return Sub;
             } else {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Sub = builder.CreateFSub(val1, val2);
                 return Sub;
             }
@@ -188,13 +188,13 @@ namespace moderndbs {
 
         llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Mul = builder.CreateMul(val1, val2);
                 return Mul;
             } else {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Mul = builder.CreateFMul(val1, val2);
                 return Mul;
             }
@@ -219,13 +219,13 @@ namespace moderndbs {
 
         llvm::Value* build(llvm::IRBuilder<>& builder, llvm::Value* args) override {
             if (this->getType() == ValueType::INT64) {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Div = builder.CreateSDiv(val1, val2);
                 return Div;
             } else {
-                llvm::Value* val1 = this->left.build(builder, args);
-                llvm::Value* val2 = this->right.build(builder, args);
+                llvm::Value* val1 = this->left.build(builder, &*args);
+                llvm::Value* val2 = this->right.build(builder, &*args);
                 llvm::Value *Div = builder.CreateFDiv(val1, val2);
                 return Div;
             }

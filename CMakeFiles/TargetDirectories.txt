@@ -1,0 +1,17 @@
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/rebuild_cache.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/edit_cache.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/bm_expression.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/lint_test.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/moderndbs.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/tester.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/googletest.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/gmock_src.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/gflags_src.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/intrinsics_gen.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/rapidjson_src.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/gtest_src.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/lint.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/lint_tools.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/test.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/lint_src.dir
+/Users/ahmettanakol/projects/moderndb/task-6-expressions/CMakeFiles/benchmark_src.dir
